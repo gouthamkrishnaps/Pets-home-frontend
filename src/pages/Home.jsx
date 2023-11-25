@@ -5,7 +5,7 @@ function Home() {
   return (
     <div style={{}}>
         <Container>
-            <Row
+            
         </Container>
     </div>
   )
