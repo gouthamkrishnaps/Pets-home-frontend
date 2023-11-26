@@ -21,7 +21,7 @@ function Header() {
     <div>
         <Navbar fixed='top' expand="lg" className="bg-body-tertiary shadow">
         <Container>
-            <h1  style={{transition:'500ms'}} className={`${show && `navhead`}`}>Pet's home</h1>
+            <h1  style={{transition:'500ms'}} className={`${show && `navhead`}`}>Pet's Home</h1>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
             <Nav className="m-auto gap-5" style={{ maxHeight: '100px' }} navbarScroll>
@@ -41,7 +41,7 @@ function Header() {
                 </NavDropdown> */}
             </Nav>
             <Form>
-                <Button style={{transition:'500ms'}} className='rounded-5 btn-warning ' size={`${!show && `lg`}`}>Make an Appointment</Button>
+                <Button style={{transition:'500ms'}} className='rounded-5 btn-warning ' size={`${!show && `lg`}`}><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
             </Form>
             </Navbar.Collapse>
         </Container>
