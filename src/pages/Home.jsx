@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import Lottie from 'lottie-react'
 import animationData from '../assets/Animation - 1700974315430 (1).json'
+import animationData2 from '../assets/Animation - 1701020378999.json'
 import img1 from '../images/homebg.jpg'
 import Cards from '../components/Cards'
 import { Link } from 'react-router-dom'
@@ -10,20 +11,7 @@ import {fadeIn} from '../variants'
 
 
 function Home() {
-    const [show,setshow]=useState()
-    const [section,setSection]=useState()
-    useEffect(()=>{
-        window.addEventListener('scroll',()=>{
-          if(window.scrollY>400){
-            setshow(true)
-          }
-          else{
-            setshow(false)
-            
-          }
-        })
-        
-    })
+
 
   return (
     <div className='main-div' style={{}}>
@@ -66,7 +54,7 @@ function Home() {
 
         <div style={{backgroundColor:'#8AAEE0'}} className=''>
             <motion.div 
-                variants={fadeIn('right', 0.1)}
+                variants={fadeIn('left', 0)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{once: false,amount:0.7}}
@@ -94,7 +82,7 @@ function Home() {
         <section>
             <div style={{backgroundColor:'#8AAEE0',marginTop:'-2px'}} className='home-bg d-flex justify-content-center align-items-center flex-column'>
                 <motion.div 
-                variants={fadeIn('left', 0.1)}
+                variants={fadeIn('right', 0)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{once: false,amount:0.7}} >
@@ -114,7 +102,8 @@ function Home() {
                         </Col>
                         <Col md={6} sm={12}>
                         <div style={{height:'60vh'}} className='d-flex justify-content-center align-items-center'>
-                            <img className='rounded-circle' src={img1} alt="" width={'400px'} height={'400px'}/>
+                            {/* <img className='rounded-circle' src={img1} alt="" width={'400px'} height={'400px'}/> */}
+                            <Lottie animationData={animationData2} style={{width:'500px'}}/>
                         </div>
                         </Col>
                     </Row>
@@ -130,6 +119,45 @@ function Home() {
             <Cards/>
             <h4 className='text-center mt-5 fw-bold'><Link style={{textDecoration:'none', color:'#395886'}}>View more....</Link></h4>
         </div>
+       </section>
+
+       <section>
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#8aaee0" fill-opacity="1" d="M0,96L21.8,122.7C43.6,149,87,203,131,229.3C174.5,256,218,256,262,229.3C305.5,203,349,149,393,112C436.4,75,480,53,524,85.3C567.3,117,611,203,655,229.3C698.2,256,742,224,785,176C829.1,128,873,64,916,42.7C960,21,1004,43,1047,42.7C1090.9,43,1135,21,1178,48C1221.8,75,1265,149,1309,160C1352.7,171,1396,117,1418,90.7L1440,64L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"></path></svg>
+        <div style={{backgroundColor:'#8AAEE0'}} className=''>
+            <Row>
+                <Col lg={6} sm={12}>
+                    <motion.div 
+                    variants={fadeIn('right', 0)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{once: false,amount:0.7}}
+                    className='d-flex align-items-center justify-content-center'>
+                        <img height={'350px'} className='rounded-5' src="https://lanevet.com/wp-content/uploads/2022/12/two-vets-with-dogs.jpg" alt="" width={'300px'}/>
+                    </motion.div>
+                   
+                </Col>
+                <Col lg={6} sm={12}>
+                <motion.div
+                variants={fadeIn('left', 0)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once: false,amount:0.7}}
+                >
+                    <span className='fw-bold' style={{fontSize:'40px',color:'#395886'}}>Meet Dr. Baker and Her Team <br /> Partners in Your Pet’s Care</span>
+                    <div className='text-light'>
+                        <p style={{textAlign:'justify'}} className='w-75'>
+                        Veterinarian and practice owner Dr. Sarah Baker set out to make Lane Veterinary a place that nurtures your pet’s health and provides relationship-focused medicine. We are also dedicated to educating you and getting you more involved in your pet’s care, so you can feel comfortable asking questions and have a better understanding of your pet’s health and needs.
+                        </p>
+                    </div>
+                    <Form>
+                        <Button style={{transition:'500ms'}} className='rounded-5 btn-warning ' size="lg"><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
+                    </Form>
+                </motion.div>
+
+                </Col>
+            </Row>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#8aaee0" fill-opacity="1" d="M0,320L20,320C40,320,80,320,120,288C160,256,200,192,240,176C280,160,320,192,360,186.7C400,181,440,139,480,122.7C520,107,560,117,600,112C640,107,680,85,720,80C760,75,800,85,840,117.3C880,149,920,203,960,213.3C1000,224,1040,192,1080,154.7C1120,117,1160,75,1200,101.3C1240,128,1280,224,1320,234.7C1360,245,1400,171,1420,133.3L1440,96L1440,0L1420,0C1400,0,1360,0,1320,0C1280,0,1240,0,1200,0C1160,0,1120,0,1080,0C1040,0,1000,0,960,0C920,0,880,0,840,0C800,0,760,0,720,0C680,0,640,0,600,0C560,0,520,0,480,0C440,0,400,0,360,0C320,0,280,0,240,0C200,0,160,0,120,0C80,0,40,0,20,0L0,0Z"></path></svg>
        </section>
 
     </div>

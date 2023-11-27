@@ -32,3 +32,6 @@
 .adopt-card:hover{
     transform: scale(1.06);
 }
+.footer-row span{
+    color: gray;
+  }
