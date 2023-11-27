@@ -69,21 +69,15 @@ function Header() {
                     Something else here
                 </NavDropdown.Item>
                 </NavDropdown> */}
-                        </Nav>
-                        <Form>
-                            <Button
-                                style={{ transition: "500ms" }}
-                                className="rounded-5 btn-warning "
-                                size={`${!show && `lg`}`}
-                            >
-                                Make an Appointment
-                            </Button>
-                        </Form>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-        </div>
-    );
+            </Nav>
+            <Form>
+                <Button style={{transition:'500ms'}} className='rounded-5 btn-warning ' size={`${!show && `lg`}`}><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
+            </Form>
+            </Navbar.Collapse>
+        </Container>
+        </Navbar>
+    </div>
+  )
 }
 
 export default Header;
