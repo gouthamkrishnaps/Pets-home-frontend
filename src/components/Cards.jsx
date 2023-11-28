@@ -5,7 +5,7 @@ import img2 from '../images/pet2.jpg'
 import img3 from '../images/pet3.jpg'
 import img4 from '../images/pet4.jpg'
 import img5 from '../images/pet5.jpg'
-import img6 from '../images/pet6.jpg'
+import img6 from '../images/pet4.jpg'
 import { motion } from "framer-motion"
 import {fadeIn} from '../variants'
 

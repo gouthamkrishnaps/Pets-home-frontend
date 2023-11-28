@@ -2,6 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Data from "../data.json";
 import { Col, Row } from "react-bootstrap";
+import img1 from '../images/pet7.jpg'
 
 function Services({ details }) {
     const data = Data[details];
@@ -10,13 +11,13 @@ function Services({ details }) {
         <>
             <div className="d-flex justify-content-center flex-column">
                 <img
-                    className="p-5 "
+                    className="p-5 mt-5"
                     style={{
                         borderRadius: "100px",
                         backgroundRepeat: "no-repeat",
                     }}
-                    src="https://hips.hearstapps.com/hmg-prod/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=1.00xw:0.756xh;0,0.0756xh&resize=640:*"
-                    alt=""
+                    src={img1}
+                    alt="" 
                 />
 
                 {/* Code to display the Appointment Section */}

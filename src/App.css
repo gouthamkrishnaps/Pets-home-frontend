@@ -4,14 +4,6 @@
 .navhead{
     font-size: 30px;
 }
-/* .animate-about{
-    transform: translateX(25%);
-    transition: 2s;
-}
-.animate-section{
-    transform: translateX(-25%);
-    transition: 2s;
-} */
 .bg-image{
     width: 100%;
     background-image: url(images/pet3.jpg);
@@ -19,9 +11,9 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     display: none;
-}
+} */
 .bg-image{
     background-color: rgba(0, 0, 0, 0);
 }
