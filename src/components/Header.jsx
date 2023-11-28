@@ -62,6 +62,7 @@ function Header() {
                             </span>
                             <span className="navlinks ">About</span>
                             <span className="navlinks ">Pharmacy</span>
+                            <Link style={{textDecoration:'none', color:'black'}} to={'/careers'}>Careers</Link>
                             <span className="navlinks ">Blog</span>
                           </Nav>
             <Form>
