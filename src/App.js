@@ -7,6 +7,7 @@ import PetsBuy from "./pages/PetsBuy";
 import { Route, Routes } from "react-router-dom";
 import data from "./data.json";
 import Services from "./pages/Services";
+import Careers from "./pages/Careers";
 
 function App() {
     const data1 = data.vaccine;
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/dental" element={<Services details = "dental" />} />
                 
                 <Route path="/petsbuy" element={<PetsBuy />} />
+                <Route path="/careers" element={<Careers />} />
             </Routes>
             <Footer />
         </div>
