@@ -25,7 +25,7 @@ function Careers() {
 
             <Col className='d-flex flex-column align-items-center justify-content-center' md={4} sm={2}>
                 <h4>Apply Today!</h4>
-                <div style={{borderRadius:'80px', backgroundColor:'#9370DB'}} className='btn mt-3 text-light'><i class="fa-solid fa-paw me-2"></i> SEND YOUR APPLICATION</div>
+                <a href='mailto:petshome@gmail.com' style={{borderRadius:'80px', backgroundColor:'#9370DB'}} className='btn mt-3 text-light'><i class="fa-solid fa-paw me-2"></i> SEND YOUR APPLICATION</a>
             </Col>
            </Row>
         </section>
@@ -81,7 +81,7 @@ function Careers() {
             <h3 style={{color:'#8A9A5B'}}>Join the Lane Veterinary Team</h3>
             <h5>Apply with us today. Please send us a copy of</h5>
             <h5>your cover letter and resume.</h5>
-            <div style={{borderRadius:'80px', backgroundColor:'#9370DB'}} className='btn mt-3 text-light'><i class="fa-solid fa-paw me-2"></i> SEND YOUR APPLICATION</div>
+            <a href="mailto:petshome@gmail.com" style={{borderRadius:'80px', backgroundColor:'#9370DB'}} className='btn mt-3 text-light'><i class="fa-solid fa-paw me-2"></i> SEND YOUR APPLICATION</a>
             </Col>
 
             <Col>
