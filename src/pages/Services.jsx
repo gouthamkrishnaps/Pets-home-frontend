@@ -161,10 +161,13 @@ function Services({ details, isLogin }) {
                             <p>{data[0].title_3_para_1}</p>
                         </Col>
                         <Col md={3} >
-                            <p>{data[0].title_3_para_2}</p>
-                            <p className="fw-bold fs-5">
-                                {data[0].title_3_bold}
-                            </p>
+                            {
+                                (data[0].title_3_para_2 == "") ? <p className="fw-bold fs-5">
+                                    {data[0].title_3_bold}
+                                </p> : <p>{data[0].title_3_para_2}</p>
+                            }
+
+
                         </Col>
                     </Row>
 
