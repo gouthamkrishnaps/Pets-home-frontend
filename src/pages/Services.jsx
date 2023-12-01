@@ -3,8 +3,10 @@ import Button from "react-bootstrap/Button";
 import Data from "../data.json";
 import { Col, Row } from "react-bootstrap";
 import img1 from '../images/pet7.jpg'
+import { Link } from "react-router-dom";
 
-function Services({ details }) {
+function Services({ details, isLogin }) {
+    console.log(isLogin);
     const data = Data[details];
     console.log(data);
     return (
@@ -17,7 +19,7 @@ function Services({ details }) {
                         backgroundRepeat: "no-repeat",
                     }}
                     src={img1}
-                    alt="" 
+                    alt=""
                 />
 
                 {/* Code to display the Appointment Section */}
@@ -48,16 +50,33 @@ function Services({ details }) {
                         {data[0].title_1_bold}
                     </p>
                     {/* Code for Button to book appointment */}
-                    <Button
-                        style={{
-                            transition: "500ms",
-                            width: "250px",
-                            height: "4.5rem",
-                        }}
-                        className="rounded-5 mt-3 btn-warning fs-5"
-                    >
-                        Make an Appointment
-                    </Button>
+
+                    {
+                        (isLogin) ? <Link to="/appointments">
+                            <Button
+                                style={{
+                                    transition: "500ms",
+                                    width: "250px",
+                                    height: "4.5rem",
+                                }}
+                                className="rounded-5 mt-3 btn-warning fs-5"
+                            >
+                                Make an Appointment
+                            </Button>
+                        </Link> :
+                            <Link to="/login">
+                                <Button
+                                    style={{
+                                        transition: "500ms",
+                                        width: "250px",
+                                        height: "4.5rem",
+                                    }}
+                                    className="rounded-5 mt-3 btn-warning fs-5"
+                                >
+                                    Make an Appointment
+                                </Button>
+                            </Link>
+                    }
                 </div>
 
                 {/* Information Section */}
@@ -153,7 +172,7 @@ function Services({ details }) {
                         src={`${data[0].img2}`}
                         alt="no-image"
                         height={"500px"}
-                        style={{borderRadius:"50px"}}
+                        style={{ borderRadius: "50px" }}
                     />
                 </div>
             </div>

@@ -6,10 +6,12 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Dropdown from "react-bootstrap/Dropdown";
 import { Link } from "react-router-dom";
+import { color } from "framer-motion";
 
 
-function Header() {
+function Header({ isLogin }) {
     const [show, setshow] = useState();
+
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 100) {
@@ -23,13 +25,13 @@ function Header() {
         <div>
             <Navbar fixed="top" expand="lg" className="bg-body-tertiary shadow">
                 <Container>
-                  <Link to="/" style={{textDecoration :"none"}}>
-                    <h1
-                        style={{ transition: "500ms" }}
-                        className={`${show && `navhead`}`}
-                    >
-                        Pet's home
-                    </h1></Link>
+                    <Link to="/" style={{ textDecoration: "none" }}>
+                        <h1
+                            style={{ transition: "500ms" }}
+                            className={`${show && `navhead`}`}
+                        >
+                            Pet's home
+                        </h1></Link>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -41,38 +43,52 @@ function Header() {
                                 <Dropdown>
                                     <Dropdown.Toggle
                                         variant="none"
-                                        id="dropdown-basic"
                                         className="navlinks"
                                     >
                                         Services
                                     </Dropdown.Toggle>
 
-                                    <Dropdown.Menu>
-                                        <Dropdown.Item href="/vaccination" >
-                                            Vaccination
+                                    <Dropdown.Menu style={{ width: "250px", fontSize: "18px" }}>
+                                        <Dropdown.Item href="/vaccination"  >
+                                            Vaccinations
                                         </Dropdown.Item>
                                         <Dropdown.Item href="/wellness">
-                                            Wellness
+                                            Wellness Care
                                         </Dropdown.Item>
                                         <Dropdown.Item href="/dental">
-                                            Dental
+                                            Dental Care
                                         </Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </span>
                             <span className="navlinks ">About</span>
                             <span className="navlinks ">Pharmacy</span>
-                            <Link style={{textDecoration:'none', color:'black'}} to={'/careers'}>Careers</Link>
+
+                            <Link className="navlinks" style={{ textDecoration: 'none', color: 'black' }} to={'/careers'}>Careers</Link>
+
                             <span className="navlinks ">Blog</span>
-                          </Nav>
-            <Form>
-                <Button style={{transition:'500ms'}} className='rounded-5 btn-warning ' size={`${!show && `lg`}`}><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
-            </Form>
-            </Navbar.Collapse>
-        </Container>
-        </Navbar>
-    </div>
-  )
+                            {
+                                isLogin && <Link style={{ textDecoration: 'none', color: 'black' }} to={'/profile'}>Profile</Link>
+
+                            }
+                        </Nav>
+                        {
+                            isLogin ?
+                                <Link to="/appointments">
+                                    <Button style={{ transition: '500ms' }} className='rounded-5 btn-warning ' size={`${!show && `lg`}`}><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
+
+                                </Link>
+                                :
+                                <Link to="/login">
+                                    <Button style={{ transition: '500ms' }} className='rounded-5 btn-warning ' size={`${!show && `lg`}`}><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
+                                </Link>
+                        }
+
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </div >
+    )
 }
 
 export default Header;
