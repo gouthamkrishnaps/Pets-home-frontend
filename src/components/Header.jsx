@@ -22,7 +22,7 @@ function Header({ isLogin }) {
         });
     });
     return (
-        <div>
+        <div >
             <Navbar fixed="top" expand="lg" className="bg-body-tertiary shadow">
                 <Container>
                     <Link to="/" style={{ textDecoration: "none" ,color:'black'}}>
