@@ -25,7 +25,7 @@ function Header({ isLogin }) {
         <div>
             <Navbar fixed="top" expand="lg" className="bg-body-tertiary shadow">
                 <Container>
-                    <Link to="/" style={{ textDecoration: "none" }}>
+                    <Link to="/" style={{ textDecoration: "none" ,color:'black'}}>
                         <h1
                             style={{ transition: "500ms" }}
                             className={`${show && `navhead`}`}
@@ -64,20 +64,20 @@ function Header({ isLogin }) {
                             <span className="navlinks ">About</span>
                             <span className="navlinks ">Pharmacy</span>
 
-                            <Link className="navlinks" style={{ textDecoration: 'none', color: 'black' }} to={'/careers'}>Careers</Link>
+                            <Link style={{ textDecoration: 'none', color: 'black' }} to={'/careers'}><span className="navlinks">Careers</span></Link>
 
                             <span className="navlinks ">Blog</span>
                             {
-                                isLogin && <Link style={{ textDecoration: 'none', color: 'black' }} to={'/profile'}>Profile</Link>
+                                isLogin && <Link style={{ textDecoration: 'none', color: 'black' }} to={'/profile'}><span className="navlinks">Profile</span></Link>
 
                             }
                         </Nav>
                         {
                             isLogin ?
-                                <Link to="/appointments">
-                                    <Button style={{ transition: '500ms' }} className='rounded-5 btn-warning ' size={`${!show && `lg`}`}><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
-
-                                </Link>
+                                    <Link to="/appointments">
+                                        <Button style={{ transition: '500ms' }} className='rounded-5 btn-warning ' size={`${!show && `lg`}`}><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
+    
+                                    </Link>
                                 :
                                 <Link to="/login">
                                     <Button style={{ transition: '500ms' }} className='rounded-5 btn-warning ' size={`${!show && `lg`}`}><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
