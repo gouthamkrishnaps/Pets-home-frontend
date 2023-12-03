@@ -74,7 +74,7 @@ function Header({ isLogin }) {
                         </Nav>
                         {
                             isLogin ?
-                                    <Link to="/appointments">
+                                    <Link to="/appointment">
                                         <Button style={{ transition: '500ms' }} className='rounded-5 btn-warning ' size={`${!show && `lg`}`}><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
     
                                     </Link>
