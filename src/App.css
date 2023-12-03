@@ -18,6 +18,13 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.Authorization{
+    width: 100%;
+    background-image: url(images/Wave-10s-1536px.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 /* ::-webkit-scrollbar{
     display: none;
 } */

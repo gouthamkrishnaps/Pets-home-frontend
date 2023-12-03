@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Services from "./pages/Services";
 import Careers from "./pages/Careers";
 import { useState } from "react";
+import Auth from "./components/Auth";
 
 function App() {
     const [isLogin, setIsLogin] = useState(false)
@@ -23,7 +24,8 @@ function App() {
                 <Route path="/vaccination" element={<Services details = "vaccination" isLogin={isLogin}/>} />
                 <Route path="/wellness" element={<Services details = "wellness" isLogin={isLogin} />} />
                 <Route path="/dental" element={<Services details = "dental" isLogin={isLogin} />} />
-                
+                <Route path="/register" element={<Auth register/>} />
+                <Route path="/auth" element={<Auth />} />
                 <Route path="/petsbuy" element={<PetsBuy />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path= "/Appointment" element={<Appointment/>} />

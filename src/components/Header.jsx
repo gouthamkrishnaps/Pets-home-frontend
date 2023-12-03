@@ -61,12 +61,12 @@ function Header({ isLogin }) {
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </span>
-                            <span className="navlinks ">About</span>
-                            <span className="navlinks ">Pharmacy</span>
+                            <Link style={{ textDecoration: 'none', color: 'black' }} to={'/'}><span className="navlinks ">About</span></Link>
+                            <Link style={{ textDecoration: 'none', color: 'black' }} to={'/petsbuy'}><span className="navlinks ">Our Pets</span></Link>
 
                             <Link style={{ textDecoration: 'none', color: 'black' }} to={'/careers'}><span className="navlinks">Careers</span></Link>
 
-                            <span className="navlinks ">Blog</span>
+                            <Link  style={{ textDecoration: 'none', color: 'black' }} to={'/'}><span className="navlinks ">Blog</span></Link>
                             {
                                 isLogin && <Link style={{ textDecoration: 'none', color: 'black' }} to={'/profile'}><span className="navlinks">Profile</span></Link>
 
@@ -79,7 +79,7 @@ function Header({ isLogin }) {
     
                                     </Link>
                                 :
-                                <Link to="/login">
+                                <Link to="/auth">
                                     <Button style={{ transition: '500ms' }} className='rounded-5 btn-warning ' size={`${!show && `lg`}`}><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
                                 </Link>
                         }
