@@ -1,45 +1,95 @@
 import React from 'react'
-import { Button, Container } from 'react-bootstrap'
-import "./style.css"
+import { Button, Container, Form } from 'react-bootstrap'
+/* import "./style.css" */
 
 function Appointment() {
   return (
     
-    <div className=' home text-center' style={{backgroundImage:"'https://images.healthservicediscounts.com/retailer/2044/banner.jpg'"}}>
-      <h1 className='text-center mt-5'>Lane veterinary</h1>
-     <h2  className='text-center'>Request an Appoinment</h2>
-    <p >If you are a current client and would like to schedule an appointment <br /> with our Nurses,please call, text, or email to ensure we are scheduling you appropriately.</p>
-
-    <form className='mt-5 'style={{ border:50}} >
+    <div className='d-flex justify-content-center align-items-center pb-3 appointment-bg'>
+      <div className='bg-light home my-5 d-flex justify-content-center align-items-center flex-column border border-2 rounded shadow' style={{width:'600px'}}>
+        <h1 >Lane veterinary</h1>
+        <h2  className='text-center'>Request an Appoinment</h2>
+        <p className='text-center' style={{width:'500px'}}>If you are a current client and would like to schedule an appointment with our Nurses,please call, text, or email to ensure we are scheduling you appropriately.</p>
     
-    <div type='text'>Full name</div>
-    <input type="text" />
-    <div type='mail'>Email adress</div>
-    <input type="text" />
-    <div type='text' >Phone number</div>
-    <input type="text"/>
-    <div type='text'>Pet nanme</div>
-    <input type="text" />
-    <div type='text'>Appointment type</div>
-    <input type="text" />
-    <div type='text'>With whom</div>
-    <input type="text" placeholder='Choose  an appointment type' />
-    <div type='text'>preferred date </div>
-    <input type="text "  placeholder='No appoinment dates available' /> <br/>
-    <div type='text'>preferred time </div>
-    <input type="text "  placeholder='No appoinment times available' /> <br/>
-    <div>prefered contact method</div>
-    <br/><Button>Send Appoinment Request</Button>
-
-
-   
-
-
-
-
-
-    </form>
+        <Form className='d-flex flex-column'>
+          <Form.Group className="mb-3 input-box" controlId="exampleForm.ControlInput2">
+              <Form.Label>Full name</Form.Label>
+              <Form.Control className=' w-100' type="text"  required/>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
+            <Form.Label>Email adress</Form.Label>
+            <Form.Control type="text" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
+            <Form.Label >Phone number</Form.Label>
+            <Form.Control type="text"/>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput5">
+            <Form.Label>Pet name</Form.Label>
+            <Form.Control type="text" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput6">
+            <Form.Label>Appointment type</Form.Label>
+            <Form.Select aria-label="Default select example">
+              <option></option>
+              <option value="1">Wellness Exam</option>
+              <option value="2">Urgent/Sick Exam</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput7">
+            <Form.Label >With whom</Form.Label>
+            <Form.Select aria-label="Default select example">
+              <option></option>
+              <option value="1">No preference</option>
+              <option value="2">Dr.Joy</option>
+              <option value="3">Dr.Abhraham</option>
+              <option value="4">Dr.Alex</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput8">
+            <Form.Label>Preferred date </Form.Label>
+            <Form.Control type="date"   />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput9">
+            <Form.Label >Preferred time </Form.Label>
+            <Form.Select aria-label="Default select example">
+              <option></option>
+              <option value="1">9 Am</option>
+              <option value="2">10 Am</option>
+              <option value="3">11 Am</option>
+              <option value="4">12 Pm</option>
+              <option value="5">1 Pm</option>
+              <option value="6">2 Pm</option>
+              <option value="7">3 Pm</option>
+              <option value="8">4 Pm</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput10"> 
+            <Form.Label>Prefered contact method</Form.Label>
+              <div className='d-flex gap-2'>
+                <Form.Check label="Email"
+                name="group1"
+                type="radio"/>
+                <Form.Check label="Text"
+                name="group1"
+                type="radio"/>
+                <Form.Check label="Call"
+                name="group1"
+                type="radio"/>
+              </div>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput5">
+            <Form.Label>Any Comments</Form.Label>
+            <Form.Control as="textarea" />
+          </Form.Group>
+          <Button className='btn rounded-pill'>Send Appoinment Request</Button>
+        <br/>
+  
+        </Form>
+  
+      </div>
     </div>
+    
   )
 }
 

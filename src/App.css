@@ -11,6 +11,13 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.appointment-bg{
+    width: 100%;
+    background-image: url(images/pet1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 /* ::-webkit-scrollbar{
     display: none;
 } */
@@ -32,4 +39,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.input-box{
+    width: 500px;
 }
