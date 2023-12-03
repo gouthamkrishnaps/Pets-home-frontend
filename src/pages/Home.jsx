@@ -41,7 +41,8 @@ function Home() {
                                             <Form>
                                                 <Button style={{transition:'500ms'}} className='rounded-5 btn-warning ' size="lg"><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
                                             </Form>
-                                        </motion.div>
+                                        </motion.div
+                                       >
                                     </div>
                                 </div>
                             </Col>
@@ -127,7 +128,7 @@ function Home() {
             <span className='fw-bold' style={{fontSize:'60px',color:'#395886'}}>Are you planning to adopt a pet ? </span>
             <span className='fw-bold mb-3' style={{fontSize:'40px',color:'grey'}}>Check out these</span>
             <Cards/>
-            <h4 className='text-center mt-5 fw-bold'><Link to={'/petsbuy'} style={{textDecoration:'none', color:'#395886'}}>View more....</Link></h4>
+            <h4 className='text-center mt-5 fw-bold'><Link style={{textDecoration:'none', color:'#395886'}}>View more....</Link></h4>
         </div>
        </section>
 
@@ -202,7 +203,7 @@ function Home() {
 
        <section>
        <div className='mt-5'>
-       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.0360697132!2d-74.30932960709077!3d40.697539963305694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1701586230117!5m2!1sen!2sin" width="1600" height="500" style={{border:'0'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.0360697132!2d-74.30932960709077!3d40.697539963305694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1701586230117!5m2!1sen!2sin" width="100%" height="500" style={{border:'0'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         </section>
 
