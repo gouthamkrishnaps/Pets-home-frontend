@@ -173,11 +173,39 @@ function Home() {
        </section>
 
        <section>
-        <div>
-            
-        </div>
+        <motion.div 
+        variants={fadeIn('up', 0)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{once: false,amount:0.1}}
+        className='align-items-center justify-content-center d-flex w-100 flex-column'>
+            <div className="icon align-items-center justify-content-center d-flex w-100">
+                <img width={'100px'} height={'100px'} src="http://pluspng.com/img-png/vet-clinic-png-veterinary-clinic-animal-hospital-in-sanford-lake-mary-area-432.png" alt="" />
+            </div>
+            <Container>
+                <div className="content align-items-center justify-content-center d-flex w-100 flex-column">
+                <span className='fw-bold' style={{fontSize:'50px',color:'#395886'}}>Your Pet’s Well-Being is Our Pet Project </span>
+                <Row>
+                    <Col>
+                    <p style={{textAlign:'justify',width:'500px'}}>At Lane, we see what corporate practices do, and we strive to do the opposite. Individualized veterinary care is the only way we practice medicine here. We prescribe treatments based on your pet’s lifestyle, behavior, clinical signs, and other factors. Our team takes a thoughtful, wholistic approach, which you can see reflected in your companion’s health and longevity.</p>
+                    </Col>
+                    <Col>
+                    <p style={{textAlign:'justify',width:'500px'}}>Every time your pet visits us, we want you to be as involved with their treatment as much as possible. If they’re seeing us for blood testing or booster vaccines, we welcome you to observe the procedure. You'll learn more about your pet’s care and become better acquainted with our team!</p>
+                    </Col>
+                </Row>
+                <Form>
+                    <Button style={{transition:'500ms'}} className='rounded-5 btn-warning ' size="lg"><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
+                </Form>
+                </div>
+            </Container>
+        </motion.div>
        </section>
-       
+
+       <section>
+       <div className='mt-5'>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.0360697132!2d-74.30932960709077!3d40.697539963305694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1701586230117!5m2!1sen!2sin" width="1600" height="500" style={{border:'0'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        </section>
 
     </div>
   )
