@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Col, Form, Row } from 'react-bootstrap'
 import animationdata3 from '../assets/Animation - 1701613384620 (1).json'
+import animationdata4 from '../assets/Animation - 1701746579931 (1).json'
 import Lottie from 'lottie-react'
 import { Link } from 'react-router-dom'
 
@@ -12,7 +13,10 @@ function Auth({register}) {
             <Col>
             <div style={{height:'90vh'}} className='d-flex justify-content-center align-items-center w-100'>
                 <div>
-                    <Lottie loop={false} animationData={animationdata3} style={{width:'600px'}}/>
+                    {registerForm ?
+                        <Lottie loop={false} animationData={animationdata4} style={{width:'600px'}}/> :
+                        <Lottie loop={false} animationData={animationdata3} style={{width:'600px'}}/>
+                        }
                 </div>
             </div>
             </Col>
