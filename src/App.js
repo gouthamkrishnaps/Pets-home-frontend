@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import Careers from "./pages/Careers";
 import { useState } from "react";
 import Auth from "./components/Auth";
+import About from "./pages/About";
 
 function App() {
     const [isLogin, setIsLogin] = useState(false)
@@ -29,6 +30,8 @@ function App() {
                 <Route path="/petsbuy" element={<PetsBuy />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path= "/Appointment" element={<Appointment/>} />
+                <Route path= "/About" element={<About/>} />
+
             </Routes>
             <Footer />
         </div>

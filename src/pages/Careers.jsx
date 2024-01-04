@@ -221,7 +221,7 @@ function Careers() {
             </a>
           </div>
 
-          <div className="d-flex justify-content-center align-items-center">
+          <div className="d-flex justify-content-center align-items-center mb-5">
             <img
               width={"45%"}
               style={{

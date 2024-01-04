@@ -8,7 +8,6 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { Link } from "react-router-dom";
 import { color } from "framer-motion";
 
-
 function Header({ isLogin }) {
     const [show, setshow] = useState();
 
@@ -22,16 +21,20 @@ function Header({ isLogin }) {
         });
     });
     return (
-        <div style={{marginBottom:'70px'}}>
+        <div style={{ marginBottom: "70px" }}>
             <Navbar fixed="top" expand="lg" className="bg-body-tertiary shadow">
                 <Container>
-                    <Link to="/" style={{ textDecoration: "none" ,color:'black'}}>
+                    <Link
+                        to="/"
+                        style={{ textDecoration: "none", color: "black" }}
+                    >
                         <h1
                             style={{ transition: "500ms" }}
                             className={`${show && `navhead`}`}
                         >
                             Pet's home
-                        </h1></Link>
+                        </h1>
+                    </Link>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -48,8 +51,13 @@ function Header({ isLogin }) {
                                         Services
                                     </Dropdown.Toggle>
 
-                                    <Dropdown.Menu style={{ width: "250px", fontSize: "18px" }}>
-                                        <Dropdown.Item href="/vaccination"  >
+                                    <Dropdown.Menu
+                                        style={{
+                                            width: "250px",
+                                            fontSize: "18px",
+                                        }}
+                                    >
+                                        <Dropdown.Item href="/vaccination">
                                             Vaccinations
                                         </Dropdown.Item>
                                         <Dropdown.Item href="/wellness">
@@ -61,34 +69,83 @@ function Header({ isLogin }) {
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </span>
-                            <Link style={{ textDecoration: 'none', color: 'black' }} to={'/'}><span className="navlinks ">About</span></Link>
-                            <Link style={{ textDecoration: 'none', color: 'black' }} to={'/petsbuy'}><span className="navlinks ">Our Pets</span></Link>
-
-                            <Link style={{ textDecoration: 'none', color: 'black' }} to={'/careers'}><span className="navlinks">Careers</span></Link>
-
-                            <Link  style={{ textDecoration: 'none', color: 'black' }} to={'/'}><span className="navlinks ">Blog</span></Link>
-                            {
-                                isLogin && <Link style={{ textDecoration: 'none', color: 'black' }} to={'/profile'}><span className="navlinks">Profile</span></Link>
-
-                            }
-                        </Nav>
-                        {
-                            isLogin ?
-                                    <Link to="/appointment">
-                                        <Button style={{ transition: '500ms' }} className='rounded-5 btn-warning ' size={`${!show && `lg`}`}><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
-    
-                                    </Link>
-                                :
-                                <Link to="/auth">
-                                    <Button style={{ transition: '500ms' }} className='rounded-5 btn-warning ' size={`${!show && `lg`}`}><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
+                            <Link
+                                style={{
+                                    textDecoration: "none",
+                                    color: "black",
+                                }}
+                                to={"/About"}
+                            >
+                                <span className="navlinks ">About</span>
+                            </Link>
+                            <Link
+                                style={{
+                                    textDecoration: "none",
+                                    color: "black",
+                                }}
+                                to={"/petsbuy"}
+                            >
+                                <span className="navlinks ">Our Pets</span>
+                            </Link>
+                            <Link
+                                style={{
+                                    textDecoration: "none",
+                                    color: "black",
+                                }}
+                                to={"/careers"}
+                            >
+                                <span className="navlinks">Careers</span>
+                            </Link>
+                            <Link
+                                style={{
+                                    textDecoration: "none",
+                                    color: "black",
+                                }}
+                                to={"/"}
+                            >
+                                <span className="navlinks ">Blog</span>
+                            </Link>
+                            {isLogin && (
+                                <Link
+                                    style={{
+                                        textDecoration: "none",
+                                        color: "black",
+                                    }}
+                                    to={"/profile"}
+                                >
+                                    <span className="navlinks">Profile</span>
                                 </Link>
-                        }
+                            )}
+                        </Nav>
 
+                        {isLogin ? (
+                            <Link to="/appointment">
+                                <Button
+                                    style={{ transition: "500ms" }}
+                                    className="rounded-5 btn-warning "
+                                    size={`${!show && `lg`}`}
+                                >
+                                    <i class="fa-solid fa-dog"></i> Make an
+                                    Appointment
+                                </Button>
+                            </Link>
+                        ) : (
+                            <Link to="/auth">
+                                <Button
+                                    style={{ transition: "500ms" }}
+                                    className="rounded-5 btn-warning "
+                                    size={`${!show && `lg`}`}
+                                >
+                                    <i class="fa-solid fa-dog"></i> Make an
+                                    Appointment
+                                </Button>
+                            </Link>
+                        )}
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </div >
-    )
+        </div>
+    );
 }
 
 export default Header;
