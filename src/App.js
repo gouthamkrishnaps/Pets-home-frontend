@@ -29,9 +29,13 @@ function App() {
                 <Route path="/auth" element={<Auth />} />
                 <Route path="/petsbuy" element={<PetsBuy />} />
                 <Route path="/careers" element={<Careers />} />
+<<<<<<< HEAD
                 <Route path= "/Appointment" element={<Appointment/>} />
                 <Route path= "/About" element={<About/>} />
 
+=======
+                <Route path= "/appointments" element={<Appointment/>} />
+>>>>>>> 88e57251c651fd16b56297f87677329f2a84a470
             </Routes>
             <Footer />
         </div>
