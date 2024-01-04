@@ -41,7 +41,8 @@ function Home() {
                                             <Form>
                                                 <Button style={{transition:'500ms'}} className='rounded-5 btn-warning ' size="lg"><i class="fa-solid fa-dog"></i> Make an Appointment</Button>
                                             </Form>
-                                        </motion.div>
+                                        </motion.div
+                                       >
                                     </div>
                                 </div>
                             </Col>
@@ -127,7 +128,7 @@ function Home() {
             <span className='fw-bold' style={{fontSize:'60px',color:'#395886'}}>Are you planning to adopt a pet ? </span>
             <span className='fw-bold mb-3' style={{fontSize:'40px',color:'grey'}}>Check out these</span>
             <Cards/>
-            <h4 className='text-center mt-5 fw-bold'><Link to={'/petsbuy'} style={{textDecoration:'none', color:'#395886'}}>View more....</Link></h4>
+            <h4 className='text-center mt-5 fw-bold'><Link style={{textDecoration:'none', color:'#395886'}}>View more....</Link></h4>
         </div>
        </section>
 
